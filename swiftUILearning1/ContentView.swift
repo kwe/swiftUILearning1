@@ -7,10 +7,20 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView : View {
     var body: some View {
-        Text(AppSecrets.WRP.url)
+        NavigationView{
+            List(
+                [
+                    Event.init(caption: "hello there", filename: "one", src: "there"),
+                    Event.init(caption: "This is a test", filename: "two", src:"ha hah")
+                ].identified(by: \.filename)
+            ){
+                Text($0.caption)
+            }
+        }.navigationBarTitle(Text("Courses"))
     }
 }
 
