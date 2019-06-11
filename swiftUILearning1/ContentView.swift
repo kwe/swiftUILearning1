@@ -14,8 +14,13 @@ struct ContentView : View {
     @State var model = EventListViewModel()
     
     var body: some View {
-        List(model.events) { event in
-            Text(event.filename)
+        NavigationView {
+            List(model.events) { event in
+                VStack{
+                    Photo(imageUrl: event.src)
+                    Text(event.caption)
+                }
+            }.navigationBarTitle(Text("Recently"))
         }
     }
 }
