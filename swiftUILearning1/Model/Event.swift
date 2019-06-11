@@ -8,6 +8,6 @@
 
 import SwiftUI
 
-struct Event : Decodable {
+struct Event : Decodable, Hashable {
     let caption, filename, src : String
 }

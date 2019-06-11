@@ -14,7 +14,7 @@ struct ContentView : View {
         NavigationView{
             List(
                 [
-                    Event.init(caption: "hello there", filename: "one", src: "there"),
+                    Event.init(caption: "hello there kwe", filename: "one", src: "there"),
                     Event.init(caption: "This is a test", filename: "two", src:"ha hah")
                 ].identified(by: \.filename)
             ){
