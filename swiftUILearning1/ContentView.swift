@@ -10,17 +10,13 @@ import SwiftUI
 import Combine
 
 struct ContentView : View {
+    
+    @State var model = EventListViewModel()
+    
     var body: some View {
-        NavigationView{
-            List(
-                [
-                    Event.init(caption: "hello there kwe", filename: "one", src: "there"),
-                    Event.init(caption: "This is a test", filename: "two", src:"ha hah")
-                ].identified(by: \.filename)
-            ){
-                Text($0.caption)
-            }
-        }.navigationBarTitle(Text("Courses"))
+        List(model.events) { event in
+            Text(event.filename)
+        }
     }
 }
 
