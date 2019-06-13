@@ -17,7 +17,7 @@ struct ContentView : View {
         NavigationView {
             List(model.events) { event in
                 VStack{
-                    Photo(imageUrl: event.src)
+                    Photo(imageUrl: event.src).padding(10)
                     Text(event.caption)
                 }
             }.navigationBarTitle(Text("Recently"))

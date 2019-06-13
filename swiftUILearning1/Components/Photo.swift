@@ -20,7 +20,9 @@ struct Photo: View {
     var body: some View {
         Image(uiImage: (imageLoader.data.count == 0) ? UIImage(named: "blank")! : UIImage(data: imageLoader.data)!)
             .resizable()
-            .frame(width: 320, height: 180)
+            .frame(width:320, height:200)
+            .clipped()
+            .aspectRatio(contentMode: .fit)
     }
 }
 
