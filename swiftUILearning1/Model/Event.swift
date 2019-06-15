@@ -8,7 +8,12 @@
 
 import SwiftUI
 
+
+struct Events : Decodable {
+    let events : [Event]
+}
 struct Event : Decodable, Hashable, Identifiable {
     let id : Int
-    let filename, src, caption : String
+    let posterWidth, posterHeight : Int
+    let posterUri, score, title: String
 }

@@ -16,9 +16,9 @@ class Webservice {
         
         URLSession.shared.dataTask(with: url) { data, _, _ in
             
-            let events = try! JSONDecoder().decode([Event].self, from: data!)
+            let feed = try! JSONDecoder().decode(Events.self, from: data!)
             DispatchQueue.main.async {
-                completion(events)
+                completion(feed.events)
             }
         }.resume()
     }
