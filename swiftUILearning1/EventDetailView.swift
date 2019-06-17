@@ -15,7 +15,7 @@ struct EventDetailView : View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text(event.title)
+            Text(event.score)
                 .font(.largeTitle)
                 .lineLimit(nil)
 
@@ -32,7 +32,7 @@ struct EventDetailView_Previews : PreviewProvider {
         let e:Event = Event(id:4,
                             posterWidth: 400,
                             posterHeight:400,
-                            posterUri:"https://imageserver.huwevansimages.co.uk/andy-murray-170619/w400/CDF_170619_Andy_Murray_19.jpg",
+                            posterUri:"https://placeimg.com/400/400/any",
                             score: "Guess who's back" ,
                             title: "Wales v England")
         return EventDetailView(event: e)

@@ -28,7 +28,7 @@ struct Photo: View {
 #if DEBUG
 struct Photo_Previews : PreviewProvider {
     static var previews: some View {
-        Photo(imageUrl: "https://imageserver.huwevansimages.co.uk/wales-football-training-230319/w400/CDF_230319_CF_Wales_Football_Training_03.JPG")
+        Photo(imageUrl: "https://placeimg.com/400/400/any")
     }
 }
 #endif

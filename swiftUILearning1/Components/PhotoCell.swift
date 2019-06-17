@@ -23,7 +23,7 @@ struct PhotoCell : View {
 #if DEBUG
 struct PhotoCell_Previews : PreviewProvider {
     static var previews: some View {
-        let e = Event(id: 4, posterWidth: 400, posterHeight: 400, posterUri: "https://imageserver.huwevansimages.co.uk/wales-football-training-230319/w400/CDF_230319_CF_Wales_Football_Training_03.JPG", score: "Wales 40-0 England", title: "Wales v England")
+        let e = Event(id: 4, posterWidth: 400, posterHeight: 400, posterUri: "https://placeimg.com/400/400/any", score: "Wales 40-0 England", title: "Wales v England")
         return PhotoCell(event: e)
     }
 }
