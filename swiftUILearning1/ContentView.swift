@@ -16,11 +16,8 @@ struct ContentView : View {
     var body: some View {
         NavigationView {
             List(model.events) { event in
-                VStack{
-                    Photo(imageUrl: event.posterUri).padding(10)
-                    Text(event.score)
-                        .lineLimit(nil)
-                        .font(.body)
+                NavigationButton(destination: EventDetailView(event: event)){
+                    PhotoCell(event: event)
                 }
             }.navigationBarTitle(Text("Recently"))
         }

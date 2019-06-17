@@ -11,13 +11,16 @@ import SwiftUI
 struct EventDetailView : View {
     
     var event: Event
+    @State private var theScore = ""
 
     var body: some View {
         VStack(alignment: .leading) {
             Text(event.title)
                 .font(.largeTitle)
+                .lineLimit(nil)
+
             Photo(imageUrl:event.posterUri)
-            //TextField()
+            TextField($theScore, placeholder: Text("Score appears here"))
             Spacer()
         }.padding()
     }
@@ -31,7 +34,7 @@ struct EventDetailView_Previews : PreviewProvider {
                             posterHeight:400,
                             posterUri:"https://imageserver.huwevansimages.co.uk/andy-murray-170619/w400/CDF_170619_Andy_Murray_19.jpg",
                             score: "Guess who's back" ,
-                            title: "hello")
+                            title: "Wales v England")
         return EventDetailView(event: e)
     }
 }
